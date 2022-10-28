@@ -63,7 +63,8 @@ public class LoginPage_StepDefinitions {
 
     @Then("Please fill out this field message should display")
     public void please_fill_out_this_field_message_should_display() {
-
+        String message = loginPage.emailBox.getAttribute("validationMessage");
+        Assert.assertEquals("Please fill out this field.",message);
     }
 
     @Then("user should see the password in bullet signs")
