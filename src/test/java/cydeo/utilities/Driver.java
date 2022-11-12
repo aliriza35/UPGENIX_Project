@@ -32,7 +32,7 @@ public class Driver {
      */
     public static WebDriver getDriver(){
 
-        if (driverPool.get() == null){
+        if (driverPool.get() == null || driverPool.get().toString().contains("null")){
 
             /*
             We read our browserType from configuration.properties.
@@ -121,6 +121,7 @@ public class Driver {
         if (driverPool.get() != null){
             driverPool.get().quit(); // this line will terminate the existing session. value will not even be null
             driverPool.remove();
+
         }
     }
 

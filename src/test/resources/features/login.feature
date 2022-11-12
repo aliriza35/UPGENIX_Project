@@ -2,7 +2,7 @@
 Feature: Upgenix app login feature
 
  # @BRT-714
-  Background: For the scenarios in the feature file, user is expected to be on the login page
+  Background: For the scenarios in the login feature file, user is expected to be on the login page
     Given user is on the login page
 
   @BRT-715
